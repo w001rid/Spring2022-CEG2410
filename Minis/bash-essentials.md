@@ -14,6 +14,7 @@ This guide includes essential commands for bash/ sh shells, their definitions, a
 - `pwd`
 - `cat`
 - `vim`
+- `mkdir`
 - `sudo`
 - `chmod`
 - `chown`
