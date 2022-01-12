@@ -18,6 +18,7 @@ This guide includes essential commands for bash/ sh shells, their definitions, a
 - `sudo`
 - `chmod`
 - `chown`
+- `chgrp`
 - `ssh`
 
 ## Shortcuts and symbols
