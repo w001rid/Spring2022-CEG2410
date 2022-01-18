@@ -28,20 +28,17 @@
   - wget / curl a custom color package for vim
   - set up vim to use it
 
-## Project
+## Project 1
 
 - given messy user list, parse to emails, parse to usernames
 
-### Part A
+### Project 2
 
 - from usernames, create an account for each user
   - each user gets a home directory
   - each user is added to group org
   - org is group for each home directory
   - passwords?
-
-## Project
-
 - add functions for:
   - create single user
   - remove single user
@@ -59,6 +56,10 @@
 - SSL certificates & HTTPS
 - Exchange? / setup email server
 - configuring email from server
+  - https://sendgrid.com/blog/what-is-an-smtp-server/
+  - https://www.hostinger.com/tutorials/how-to-install-and-setup-mail-server-on-ubuntu/
+  - https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-20-04
+  - https://www.linuxbabe.com/mail-server/setup-basic-postfix-mail-sever-ubuntu
 - cron to send email
   - plus script to gather import info
 
@@ -68,6 +69,10 @@
 - Try sendgrid as smtp server
 - script to gather system info (raid status, utilization, etc)
 - have cron send script
+- https://docs.sendgrid.com/for-developers/sending-email/getting-started-smtp#before-you-begin
+- https://docs.sendgrid.com/for-developers/sending-email/integrating-with-the-smtp-api
+- Fall back plan: https://www.techrepublic.com/blog/it-security/use-ssmtp-to-send-e-mail-simply-and-securely/
+- Is it this easy? https://serverfault.com/questions/691033/how-to-send-an-e-mail-after-a-cron-job
 
 ## Project
 
@@ -88,6 +93,8 @@
 - databases
   - create
   - backup / restore
+  - https://vettabase.com/blog/a-checklist-for-database-backup-automation/
+  - https://www.adyen.com/blog/updating-a-50-terabyte-postgresql-database
   - cloud databases (RDS)
 - data backups
   - scope
@@ -114,13 +121,20 @@
 
 - powershell essentials
   - scripting in powershell
+  - https://www.thelazyadministrator.com/2022/01/11/powershell-game-you-can-compete-with-people-online-feature-update-to-pswordle/
 - AD essentials
+  - https://theitbros.com/active-directory-organizational-unit-ou/amp/
   - domains
   - exchange?
+  - certification management
+    - https://www.harmj0y.net/blog/activedirectory/certified-pre-owned/
 - Windows Server vs not
 - group policies
   - managing sudo / admin & groups
   - regedit
+- https://4sysops.com/archives/perform-active-directory-security-assessment-using-powershell/
+- Azure
+  - https://www.altaro.com/ebook/Azure-IaaS.php?LP=ITProTuesday-Banner-ebook-Azure-IaaS-SE&Cat=Blog&ALP=eBook-ebook-Azure-IaaS-SE-ITProTuesday&utm_source=ITProTuesday&utm_medium=content&utm_campaign=ebook-Azure-IaaS-SE&utm_content=ITProTuesday&utm_contentid=desktop
 
 ## In-class
 
@@ -142,8 +156,21 @@
   - CVEs
   - getting notified
   - deploying fixes
+  - https://www.fortinet.com/blog/threat-research/cve-2021-42278-cve-2021-42287-from-user-to-domain-admin-60-seconds
+  - https://www.bleepingcomputer.com/news/security/new-sysjoker-backdoor-targets-windows-macos-and-linux/amp/?amp_gsa=1&amp_js_v=a6&usqp=mq331AQIKAGwASCAAgM%3D#amp_tf=From%20%251%24s&aoh=16419621888349&csi=1&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fwww.bleepingcomputer.com%2Fnews%2Fsecurity%2Fnew-sysjoker-backdoor-targets-windows-macos-and-linux%2F
+  - https://blogs.vmware.com/security/2021/12/investigating-cve-2021-44228-log4shell-vulnerability.html
 - dashboards
   - Grafana?
+- reverse telnet - https://www.tek-tips.com/faqs.cfm?fid=1312
+
+# Automation
+
+- terraform
+  - https://github.com/cloudposse/terraform-aws-components
+  - https://github.com/cogini/multi-env-deploy/tree/master/terraform
+- jenkins
+- ansible
+  - https://github.com/davestephens/ansible-nas
 
 # virtualization, containers, & the cloud
 
@@ -153,3 +180,8 @@
 - containers
   - basics
 - on-prem vs the cloud
+  - https://stop.lying.cloud/
+
+# Fun
+
+- https://github.com/mkrl/misbrands
