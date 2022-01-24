@@ -11,6 +11,11 @@
 You will be writing four total functions. I have written them in order of ease of completion.  
 In your repo, in the `Linux` folder, create a folder named `Project1`.  
 **Challenges** are not required.  
+Sample bulk files are provided:
+
+- [short list of names](short-names.txt)
+- [big list of names](names.txt)
+
 Create a script that performs the following functions:
 
 ### add-single
