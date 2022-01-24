@@ -1,4 +1,4 @@
-# AWS Setup Guide
+# ~~AWS Setup Guide~~ - DO NOT USE
 
 You should have received an email regarding your AWS  
 Educate account for this class. We will be using AWS to create virtual environments  
