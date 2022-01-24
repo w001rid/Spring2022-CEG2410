@@ -66,7 +66,7 @@ While exploring and discovery is an important part of this course, any additiona
 
 Every 4 hours, instances (virtual machines) on AWS will automatically power down. This is good - it saves funds and use of resources. However, every 4 hours you need to restart the timer OR **Start Lab** again.
 
-1. This link should return you to [Modules -> Learner Lab Foundation Services](https://awsacademy.instructure.com/courses/13249/modules/items/1136419)
+1. This link should return you to [Modules -> Learner Lab Foundation Services](https://awsacademy.instructure.com/courses/13276/modules/items/1137826)
 2. Click the **Start Lab** Play button on the middle right
 3. Wait. 2 - 3 minutes. You will see a console appear that you can interact with.
 4. Click **AWS** which should have a green dot next to it located on the left
