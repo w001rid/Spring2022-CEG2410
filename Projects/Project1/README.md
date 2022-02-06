@@ -3,6 +3,23 @@
 
 ![image](https://user-images.githubusercontent.com/77516657/152672478-c447a8e0-6de2-4fe1-a3ab-51aa0143e3f8.png)
 
+![image](https://user-images.githubusercontent.com/77516657/152672781-25255e72-3125-4982-974c-651710b4ae21.png)
+
+![image](https://user-images.githubusercontent.com/77516657/152672801-4425a133-cbd2-45b8-ac8a-72e5fa2eb38c.png)
+
+Heyy change the code for add-bulk back to append instead of overrite then take screenshot of accunt details
+
+![image](https://user-images.githubusercontent.com/77516657/152672871-455ac790-7009-4176-97c3-de4362155686.png)
+
+Notice how user Joe isn't in group org anymore but the multiple users are still there
+![image](https://user-images.githubusercontent.com/77516657/152672890-aeddba9c-1e82-4a52-985c-ee18b3f1ddb8.png)
+
+![image](https://user-images.githubusercontent.com/77516657/152672927-c3dafdd3-e1fe-4b74-ae8e-eb7176a3f84d.png)
+
+notice that after running remove-bulk the users are removed from org
+![image](https://user-images.githubusercontent.com/77516657/152672942-ec1b095b-eaf6-4f99-b3b1-6b1f5de4fb1f.png)
+
+
 
 ## Objectives
 
