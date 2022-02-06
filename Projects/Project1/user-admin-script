@@ -1,0 +1,104 @@
+#!/bin/bash
+
+
+
+add-single() {
+        #check for sudo
+        echo "User ID running this script is $EUID with username $(whoami)"
+        if [[ $EUID -eq 0 ]]
+        then
+                echo "Enter a username:"
+                read username
+                generatedPW=$(pwgen -1)
+                useradd -s /bin/bash -m $username -p $generatedPW
+                addgroup org
+                usermod -a -G org $username
+                chgrp -R org /home/$username
+                chmod g+s  /home/$username
+                echo "$username $generatedPW" >> account_details.txt
+        else
+                echo "You don't have permissions to create a user."
+
+        fi
+
+}
+
+remove-single()  {
+        #check for sudo
+        echo "User ID running this script is $EUID with username $(whoami)"
+        if [[ $EUID -eq 0 ]]
+        then
+                echo "Enter username to remove:"
+                read rmusername
+                gpasswd -d $rmusername org
+                userdel -r $rmusername
+        else
+                echo "You don't have permissions to delete a user."
+        fi
+}
+
+add-bulk() {
+        #check for sudo
+        echo "User ID running this script is $EUID with username $(whoami)"
+        if [[ $EUID -eq 0 ]]
+        then
+                echo "Enter a file that contains usernames:"
+                read filename
+                        while read -r name
+                        do
+                                generatedPW_bulk=$(pwgen -1)
+                                useradd -s /bin/bash -m $name -p $generatedPW_bulk
+                                addgroup org
+                                usermod -a -G org $name
+                                chgrp -R org /home/$name
+                                chmod g+s  /home/$name
+                                echo "$name $generatedPW_bulk" >> bulk_account_details.txt
+                        done < $filename
+        else
+                echo "You don't have permissions to add users."
+
+        fi
+
+}
+
+remove-bulk() {
+        #check for sudo
+        echo "User ID running this script is $EUID with username $(whoami)"
+        if [[ $EUID -eq 0 ]]
+        then
+                echo "Enter a file that contains usernames to delete users:"
+                read filename
+                        while read -r name
+                        do
+                                gpasswd -d $name org
+                                userdel -r $name
+                        done < $filename
+        else
+                echo "You don't have permissions to delete users."
+        fi
+
+}
+
+        echo -e "Hello Admin (if you're not get out) \n"
+	echo -e "Type in these options if you want to create users:\n add-single\n add-bulk\n To remove users, type in these options:\n remove-single\n remove-bulk\n Then after typing, press enter"
+	read typeoption
+		if [[ $typeoption =  add-single ]]
+		then
+			add-single
+
+		elif [[ $typeoption = add-bulk ]]
+		then
+			add-bulk
+
+		elif [[ $typeoption = remove-single ]]
+		then
+			remove-single
+
+		elif [[ $typeoption = remove-bulk ]]
+		then
+			remove-bulk
+		else
+			echo "Just type one of the options right, jeez..."
+		fi
+
+
