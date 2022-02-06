@@ -15,7 +15,7 @@ add-single() {
                 usermod -a -G org $username
                 chgrp -R org /home/$username
                 chmod g+s  /home/$username
-                echo "$username $generatedPW" >> account_details.txt
+                echo "$username $generatedPW" > account_details.txt
         else
                 echo "You don't have permissions to create a user."
 
@@ -52,7 +52,7 @@ add-bulk() {
                                 usermod -a -G org $name
                                 chgrp -R org /home/$name
                                 chmod g+s  /home/$name
-                                echo "$name $generatedPW_bulk" >> bulk_account_details.txt
+                                echo "$name $generatedPW_bulk" > account_details.txt
                         done < $filename
         else
                 echo "You don't have permissions to add users."
