@@ -1,0 +1,25 @@
+---
+- name: Ansible Create user functionality module demo
+  hosts: linux #defining ther remote server inventory host group
+  remote_user: ubuntu #using remote user as ubuntu
+  tasks: 
+
+  # name - defines the username that is present or to create
+  # groups - Adds users in scondary group
+
+
+  # creating the user Rachel Duffy
+    - name: Add the user 'Rachel Duffy' with a specific uid and a primary group of 'org'
+      ansible.builtin.user:
+        name: rduffy
+        comment: RachelDuffy
+        uid: 1089
+        group: org
+        createhome: yes #defaults to yes
+        home: /home/rduffy #defaults to /home/<username>
+    - name: creating / checking group 'org' existence
+      group:
+        name: org
+        gid: 2042
+        state: present
+        

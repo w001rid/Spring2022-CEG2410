@@ -1,0 +1,11 @@
+---
+- hosts: linux
+  tasks:
+  - name: Package installation
+    ansible.builtin.package:
+      name:
+        - git
+        - vim
+        - sl
+        - python3-pip
+      state: latest 
