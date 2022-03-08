@@ -15,12 +15,12 @@ Craft a RAID that can recover from a minimum of one disk failure.
 In `RAID.md` document:
 
 - RAID type choosen
-Raid0
+-Raid0
 - Summary of pros and cons for type chosen
-Pros: Data replicationand access is faster because data is split between both drives
-Cons: There is no redundancy so if one drive fails the whole raid fails
+-Pros: Data replicationand access is faster because data is split between both drives
+-Cons: There is no redundancy so if one drive fails the whole raid fails
 - Command to build array
-sudo mdadm --create --verbose /dev/md/raid0 --level=0 --raid-devices=3 /dev/xvdh  /dev/xvdi  /dev/xvdj
+-sudo mdadm --create --verbose /dev/md/raid0 --level=0 --raid-devices=3 /dev/xvdh  /dev/xvdi  /dev/xvdj
 
 ## Part 2 - get info
 
@@ -29,9 +29,12 @@ Verify that your RAID is created and all disks are healthy
 In `RAID.md` document:
 
 - command(s) to check RAID status
-sudo mdadm --query --detail /dev/md/raid0
+-`sudo mdadm --query --detail /dev/md/raid0`
 - screenshot of what it looks like
 - How to read the output of the command(s)
+- Working devices will tell you if the drives are working without error
+- Failed devices will tell you if there is a drive that isn't working
+- At the bottom, the info will tell you what state a specific drive is in and you would be able to see the status of a specific drive in the Raid configuration
 
 ## Part 3 - mount to directory
 
@@ -40,8 +43,12 @@ Mount your RAID to a logical folder. For example, in class we discussed `/mnt` o
 In `RAID.md` document:
 
 - command(s) to create a filesystem and `mount` RAID device to a folder
+- `sudo mkfs.ext4 -F /dev/md/raid0`
+- `sudo mkdir -p /mnt/md/raid0`
+- `sudo mount /dev/md/raid0 /mnt/md/raid0`
 - verifying the RAID device is mounted
   - what commands can prove it
+  - `df -h`
 
 ## Part 4 - break it
 
