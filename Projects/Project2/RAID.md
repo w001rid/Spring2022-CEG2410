@@ -57,8 +57,11 @@ Pretend that one of the disks has been behaving oddly, so needs to be replaced. 
 In `RAID.md` document:
 
 - command to mark a disk as failing
+- `sudo mdadm /dev/md/raid0 --fail /dev/xvdj`
 - command to remove failing disk with mdadm
+- `sudo mdadm /dev/md0 --remove /dev/xvdh`
 - effect on RAID device
+Unable to run
 
 ## Part 5 - rebuild it
 
@@ -69,8 +72,10 @@ Repair the RAID array using the new device.
 In `RAID.md` document:
 
 - command to `add` new device to RAID
+- `mdadm --manage /dev/md/raid0 --add /dev/xvdk`
 - verifying that the RAID device is being rebuilt
   - what commands can prove it
+  - `mdadm --detail /dev/md/raid0`
 - screenshot result of rebuilt RAID array
 
 ## Submission
