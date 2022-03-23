@@ -70,7 +70,7 @@ Don't forget to cite your sources at the end. Links to sites you used is suffici
    - Configuration changes to set:
      - the location of the public and private files of the certificate
      - serving content over HTTPS
-      - used this command to serve content over vim: `sudo vim /etc/apache2/sites-available/54.211.182.133.conf\
+      - used this command to serve content over vim: `sudo vim /etc/apache2/sites-available/54.211.182.133.conf`\
       then I made a config file that contains: `<VirtualHost *:443>
    ServerName 54.211.182.133
    DocumentRoot /var/www/54.211.182.133
