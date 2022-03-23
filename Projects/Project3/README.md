@@ -51,8 +51,9 @@ Don't forget to cite your sources at the end. Links to sites you used is suffici
    - How to generate a certificate
       - `sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt`
    - Location for certs on system
+      - `/etc/ssl/certs`
    - Any file permissions that need to be noted for the cert
-
+      - `-rw-r--r-- 1 root root`
 ## Part 3 - Set Up HTTPS
 
 - ~~Paint the rest of the horse~~
@@ -82,10 +83,21 @@ Don't forget to cite your sources at the end. Links to sites you used is suffici
 
    - redirect HTTP requests to HTTPS
       - `sudo vim /etc/apache2/sites-available/54.211.182.133.conf`
+      - added this this code to redirect http to https\
+      `<VirtualHost *:80>
+        ServerName 54.211.182.133
+        Redirect / https://54.211.182.133/
+</VirtualHost>`
    - Restarting the service after the config changes
+      - `sudo systemctl reload apache2`
    - Proving that the changes work
+      - `sudo systemctl reload apache2`
      - Think, "What are you doing to test?"
+      - I typed in http:// my ip address and it redirected me to https
+      - It's still not truseted though since it is a self signed certifcate
    - **screenshot** of site working with HTTPS
+   ![image](https://user-images.githubusercontent.com/77516657/159712442-23b91e2d-1533-4774-9080-078ab847ee13.png)
+
 
 
 References: https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04
