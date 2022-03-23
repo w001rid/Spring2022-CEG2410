@@ -70,7 +70,7 @@ Don't forget to cite your sources at the end. Links to sites you used is suffici
    - Configuration changes to set:
      - the location of the public and private files of the certificate
      - serving content over HTTPS
-         - used this command to serve content over vim: `sudo vim /etc/apache2/sites-available/54.211.182.133.conf`\
+         - I used this command to serve content over vim: `sudo vim /etc/apache2/sites-available/54.211.182.133.conf`\
       then I made a config file that contains\
    `<VirtualHost *:443>
    ServerName 54.211.182.133
@@ -80,18 +80,12 @@ Don't forget to cite your sources at the end. Links to sites you used is suffici
    SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key
 </VirtualHost>`
 
-     - redirect HTTP requests to HTTPS
+   - redirect HTTP requests to HTTPS
+      - `sudo vim /etc/apache2/sites-available/54.211.182.133.conf`
    - Restarting the service after the config changes
    - Proving that the changes work
      - Think, "What are you doing to test?"
    - **screenshot** of site working with HTTPS
 
-## Submission
 
-- In the Pilot Dropbox, paste the URL to your submission
-  - URL should look like: https://github.com/WSU-kduncan/ceg2410-YOURGITHUBUSERNAME/blob/main/Linux/HTTPS.md
-
-## Things to Check
-
-- Check your Security Group rules
-  - make sure the right ports are open from the right places
+References: https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-20-04
