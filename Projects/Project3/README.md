@@ -35,7 +35,7 @@ Don't forget to cite your sources at the end. Links to sites you used is suffici
        - changed permissions?
          - I did not
        - changed default locations for where content is served?
-         - I also did not need to change defult locations. I replaced the disk 
+         - I also did not need to change defult locations. I replaced the index file in /var/www/html/ with my own custom file
    - **screenshot** of your content being served (default content will not get credit)
    ![image](https://user-images.githubusercontent.com/77516657/159597197-b13f3ba1-2b53-4a41-9753-d73f8171d574.png)
 
