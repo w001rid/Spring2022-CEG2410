@@ -17,7 +17,7 @@
    - what service you installed & how
       - I installed apache with `sudo apt install apache2`
    - what port it serves content over
-      - It should server content over port 8 since it is serving content over http
+      - It should serve content over port 80 since it is serving content over http
    - where site content exists
      - any special configurations you did
        - changed permissions?
