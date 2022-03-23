@@ -33,7 +33,7 @@ Don't forget to cite your sources at the end. Links to sites you used is suffici
    - where site content exists
      - any special configurations you did
        - changed permissions?
-         I did not
+         - I did not
        - changed default locations for where content is served?
          - I also did not need to change defult locations. I replaced the disk 
    - **screenshot** of your content being served (default content will not get credit)
