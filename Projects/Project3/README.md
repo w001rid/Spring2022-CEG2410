@@ -27,12 +27,18 @@ Don't forget to cite your sources at the end. Links to sites you used is suffici
 3. Document:
 
    - what service you installed & how
+      - I installed apache with `sudo apt install apache2`
    - what port it serves content over
+      - It should server content over port 8 since it is serving content over http
    - where site content exists
      - any special configurations you did
        - changed permissions?
+         I did not
        - changed default locations for where content is served?
+         - I also did not need to change defult locations. I replaced the disk 
    - **screenshot** of your content being served (default content will not get credit)
+   ![image](https://user-images.githubusercontent.com/77516657/159597197-b13f3ba1-2b53-4a41-9753-d73f8171d574.png)
+
 
 ## Part 2 - Get Certified
 
