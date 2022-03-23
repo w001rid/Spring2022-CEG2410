@@ -49,6 +49,7 @@ Don't forget to cite your sources at the end. Links to sites you used is suffici
    - You may need to "read ahead" of your documentation for using HTTPS with your HTTP content service
 3. Document:
    - How to generate a certificate
+      - `sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt`
    - Location for certs on system
    - Any file permissions that need to be noted for the cert
 
@@ -69,6 +70,17 @@ Don't forget to cite your sources at the end. Links to sites you used is suffici
    - Configuration changes to set:
      - the location of the public and private files of the certificate
      - serving content over HTTPS
+      - used this command to serve content over vim: `sudo vim /etc/apache2/sites-available/54.211.182.133.conf\
+      then I made a config file that contains `<VirtualHost *:443>
+   ServerName 54.211.182.133
+   DocumentRoot /var/www/54.211.182.133
+   
+   
+   SSLEngine on
+   SSLCertificateFile /etc/ssl/certs/apache-selfsigned.crt
+   SSLCertificateKeyFile /etc/ssl/private/apache-selfsigned.key
+</VirtualHost>`
+
      - redirect HTTP requests to HTTPS
    - Restarting the service after the config changes
    - Proving that the changes work
