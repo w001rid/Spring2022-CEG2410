@@ -1,17 +1,5 @@
 # Project 3
 
-- [Set Up HTTP](#Set-Up-HTTP)
-- [Get Certified](#Get-Certified)
-- [Set Up HTTPS](#Set-Up-HTTPS)
-- [Submission](#Submission)
-- [Rubric](Rubric.md)
-
-For this project you need access to your AWS console. [Return to here and click "Start Lab"](https://awsacademy.instructure.com/courses/13276/modules/items/1137826). **Once the icon next to "AWS" is green, click "AWS" to open the console.**
-
-In the `Linux` folder, create a file named `HTTPS.md` in your GitHub Classrooms repo. This project is mostly documentation of what you are implementing, so you are welcome to work wherever you are comfortable. I would float towards VSCode myself.
-
-Don't forget to cite your sources at the end. Links to sites you used is sufficient.
-
 ## Part 1 - Set Up HTTP
 
 1. Pick a service that serves content over HTTP on install it on your AWS instance. Recommended:
@@ -68,8 +56,10 @@ Don't forget to cite your sources at the end. Links to sites you used is suffici
 
 3. Document:
    - Enabling the service to use HTTPS
+      - I had to make a config file to enable https. See code below.
    - Configuration changes to set:
      - the location of the public and private files of the certificate
+         - `/etc/ssl/private` for the private keys
      - serving content over HTTPS
          - I used this command to serve content over vim: `sudo vim /etc/apache2/sites-available/54.211.182.133.conf`\
       then I made a config file that contains\
@@ -93,8 +83,8 @@ Don't forget to cite your sources at the end. Links to sites you used is suffici
    - Proving that the changes work
       - `sudo systemctl reload apache2`
      - Think, "What are you doing to test?"
-      - I typed in http:// my ip address and it redirected me to https
-      - It's still not truseted though since it is a self signed certifcate
+         - I typed in http:// my ip address and it redirected me to https
+         - It's still not trusted though since it is a self signed certifcate
    - **screenshot** of site working with HTTPS
    ![image](https://user-images.githubusercontent.com/77516657/159712442-23b91e2d-1533-4774-9080-078ab847ee13.png)
 
