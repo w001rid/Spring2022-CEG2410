@@ -47,14 +47,19 @@ connect tothe domain.
 Create the following Security Groups and define where they should be within the OUs based on their roles:
 
 - `project_repos_RW` - users who have Read / Write access to project repositories
-  - dg
+  - Should be in the Developer OU for developers to be able to access the repos they need.
 - `finance_RW` - users who have Read / Write access to finance share
-  - 
+  - Should be in the Finance OU so Finance people can view Finance things
 - `onboarding_R` - users who have Read access to onboarding documents
+  - Onboarding is usuall an HR process, so let HR OU contain this security group
 - `server_access` - users who can log on to Servers
+  - Traditionally in my experience, only domain admins have server access like the DCs or Exchange Servers and such
 - `dev_eng_admins` - IT admins to handle Developer and Engineer accounts
+  - I would also out this in domain admins since these are IT admins
 - `hr_finance_admins` - IT admins to handle HR and finance accounts
+  - I would also out this in domain admins since these are IT admins
 - `remote_workstation` - Group of workstations that allow RDP connections
+  -  Domain computers OU so you can spefify what computers on the domain can have RDP access
 
 ## OUs & GPOs
 
@@ -75,8 +80,6 @@ Find guides to create the following Group Policy Objects and specify where they 
 
 ### Managing OUs
 
-More people are joining the IT/ administration side of things. Note: you can promote from within or create some new users
-
 Join at least one person to the `hr_finance_admins` and `eng_dev_admins` groups, respectively. Delegate control of the OUs corresponding to the appropriate admin groups.
 
 Document how to delagate control of an OU to a group, which OUs they now delegate, and what permissions they were given (and why you think the scope is appropriate)
@@ -86,9 +89,6 @@ Document how to delagate control of an OU to a group, which OUs they now delegat
 
 ## Submission
 
-- In the Pilot Dropbox, paste the URL to your submission
-  - URL should look like: https://github.com/WSU-kduncan/ceg2410-YOURGITHUBUSERNAME/blob/main/Windows
-  - Contents should include:
     - `README.md`
     - csv file(s)
     - PowerShell script(s)
