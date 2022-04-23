@@ -68,27 +68,29 @@ Create the following Security Groups and define where they should be within the 
 Find guides to create the following Group Policy Objects and specify where they should be applied.
 
 - Lock out Workstations after 15 minutes of inactivity.
+  - https://social.technet.microsoft.com/Forums/windows/en-US/d76b1123-3ad5-4dec-8bf1-36d8412b51a7/lock-out-screen-after-inactivity-windows-10?forum=win10itprosecurity 
 - Prevent execution of programs on computers in Secure OU
+  -  https://www.urtech.ca/2019/07/solved-gpo-to-block-software-by-file-name-path-hash-or-certificate/
 - Disable Guest account login to computers in Secure OU
+  - https://techexpert.tips/windows/gpo-disable-guest-account/
 - Allow server_access to sign on to Servers
+  - https://www.lepide.com/how-to/assign-permissions-to-files-folders-through-group-policy.html
 - Set Desktop background for Conference computers to company logo.
+  -  https://www.technig.com/change-desktop-background-with-group-policy/
 - Allow users in `remote_workstation` group to RDP to Workstations
+  -  https://docs.microsoft.com/en-us/answers/questions/370650/group-policy-entry-to-allow-remote-administration.html
 
-**Extra Credit (10%)** Create and apply one of these policies, and show proof it worked.
-
-- The Windows Server you joined to the domain can serve as a good dummy here
 
 ### Managing OUs
 
 Join at least one person to the `hr_finance_admins` and `eng_dev_admins` groups, respectively. Delegate control of the OUs corresponding to the appropriate admin groups.
 
 Document how to delagate control of an OU to a group, which OUs they now delegate, and what permissions they were given (and why you think the scope is appropriate)
+- Right click the OU then left click Delegate control.
+- Choose the group you want to give permissions to thendesignate the permissions you want to give to that group
+- Finance people should have read access to Finance data since it is their department
+- Engineering admins should be able to change accesses and groups within their OU So they can manage their own projects and assign people to those projects
 
-- Resources
-- https://theitbros.com/active-directory-organizational-unit-ou/
 
-## Submission
-
-    - `README.md`
-    - csv file(s)
-    - PowerShell script(s)
+Just an FYI I have not completed some of the tasks in this project just because I was involved in a car accident recently.\
+Life just got in the way so this was all I could submit.
