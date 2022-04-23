@@ -8,7 +8,7 @@
   - Outline of basic steps, resource(s) used: I used Kel
 - Domain Name: ad.duffy.org
 - Domain Controller Name: DC01
-- Domain DNS IP: 
+- Domain DNS IP: 10.0.120
 
 ## AD Structure
 
